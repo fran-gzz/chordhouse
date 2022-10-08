@@ -1,0 +1,109 @@
+/* Bootstrap Modal  */
+.modal-dialog {
+    max-width: 1000px;
+    padding: 1.5rem;
+}
+.modal-content {
+    overflow: hidden;
+    border-radius: $radius;
+    border: none;
+    height: 70vh;
+    @include responsive( tablet ){
+        height: 90vh;
+    }
+}
+.modal-body {
+    border: none;
+    position: relative;
+    @include flex( row );
+    @include responsive( tablet ) {
+        padding: 0;
+    }
+}
+.btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    @include transition;
+}
+.modal__info {
+    text-align: center;
+    @include transition;
+    @include responsive( tablet ) {
+        padding: 0 2rem;
+    }
+}
+.modal__title {
+    font: normal 600 clamp( 3rem, 5vw, 5rem ) $font--2;
+}
+.modal__text {
+    margin: 2rem 0;
+    text-align: start;
+}
+.modal__price {
+    font: normal 600 clamp( 3rem, 5vw, 5rem ) $font--1;
+    @include flex( row );
+}
+.modal__price--sup {
+    font: normal 400 $m-size $font--1;
+    top: 0;
+}
+.modal-body img {
+    display: none;
+    @include responsive( tablet ) {
+        display: block;
+        max-width: 350px;
+        object-fit: cover;
+        height: 90vh;
+    }
+}
+
+// Bootstrap Card
+.card {
+    border-radius: 1rem;
+    min-height: 300px;
+    border: none;
+    margin-bottom: 2rem;
+    @include transition;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .2);
+    &:hover {
+        @include responsive ( desktop ) {
+            transform: scale(105%);
+        }
+    }
+}
+
+.card-top {
+    @include flex;
+    height: 100px;
+    img {
+        position: absolute;
+        z-index: 2;
+        border-radius: 50%;
+        object-fit: cover;
+        
+        @include size( 150px, 150px );
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, .2);
+    }
+
+}
+
+.card-body {
+    margin-top: 2rem;
+    padding: 4rem 2rem;
+    @include flex;
+    @include responsive( tablet ) {
+        padding: 4rem 1rem;
+    }
+    @include responsive( desktop ) {
+        padding: 4rem;
+    }
+    .card-title {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .card-text {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,28 @@
+
+/****   Globals    ****/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, 
+*:before, 
+*:after {
+    box-sizing: inherit;
+    @include reset-pm();
+}
+
+body {
+    font-size: $m-size;
+    font-family: $font--1;
+}
+
+main { background-color: $color__white--1; }
+
+a {
+    color: inherit;
+    text-decoration: none;
+    &:hover { color: unset; }
+}
+
+ul { list-style-type: none; }

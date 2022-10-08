@@ -1,0 +1,33 @@
+/* Containers */
+.container__1000px {
+    padding: 0 1rem;
+    @include container;
+}
+.container__1200px {
+    padding: 0 1rem;
+    @include container( 1200px );
+}
+/* Logo */
+.logo {
+    cursor: pointer;
+    font: normal 500 2.2rem $font--1;
+    color: $color__white--1;
+}
+/* Button */
+.button {
+    background-color: inherit;
+    border: none;
+    border-radius: $radius;    
+    cursor: pointer;
+    min-width: 150px;
+    padding: 0.5rem;
+    @include size( 5rem, 100% );
+    @include transition;
+    &--primary {
+        background-color: $color__primary;
+        color: $color__white--1;
+        &:hover {
+            background-color: $color__primary--darker;
+        }
+    }
+}

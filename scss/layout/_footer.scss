@@ -1,0 +1,29 @@
+.footer {
+    color: $color__white--2;
+    background-color: #111;
+    &__content {
+        min-height: 120px;
+        @include flex;
+        @include container( 1200px );
+    }
+    &__social {
+        gap: $gap;
+        width: 100%;
+        font-size: 2rem;
+        list-style-type: none;
+        @include flex( row );
+    }
+    &__text {
+        margin-top: 1rem;
+        font-size: $m-size;
+        padding: 1rem;
+    }
+    &__separator { padding: 1rem; }
+    &__disclaim {
+        background-color: #050505;
+        text-align: center;
+        padding: 0.5rem;
+        font-size: $s-size;
+        color: $color__white--2;
+    }
+}

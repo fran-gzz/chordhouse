@@ -1,0 +1,98 @@
+/* Hero */
+
+.hero {
+    position: relative;
+    @include size(100vh, 100%);
+    &__background {
+        object-fit: cover;
+        @include size;
+    }
+    &__text {
+        padding: 1rem;
+        position: absolute;
+        text-align: center;        
+        z-index: 1;
+        @include size;
+        @include flex;
+        &--title {
+            color: $color__white--1;
+            font: normal 600 clamp(3rem, 5vw, 8rem) $font--2;
+        }
+        &--subtitle {
+            color: $color__white--2;
+            font: normal 400 clamp(1.6rem, 2.5vw, 2.4rem) $font--1;
+        }
+    }
+}
+
+/* Parallax & Quote*/
+#parallax__section--01 {
+    height: 350px;
+    max-width: 768px;
+    background: $color__white--1 url(../img/bbking.webp) no-repeat top fixed;
+    background-size: cover;
+    @include responsive( tablet ) {
+        height: 450px;
+        max-width: 900px;
+    }
+    @include responsive( desktop ) {
+        height: 80vh;
+        max-width: 100%;
+    }
+
+}
+.quote {
+    color: $color__black--1;
+    min-height: 150px;
+    padding: 2rem;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    border-radius: $radius;
+    gap: $gap;
+    @include flex;
+}
+.quote__text {
+    font: italic 400 clamp(1.6rem, 2.5vw, 2.4rem) $font--1;
+}
+.quote__author {
+    font: normal 800 clamp(1.8rem, 2.5vw, 2.2rem) $font--2;
+}
+.swiper {
+    padding: 4rem 1.5rem;
+    @include container;
+    .swiper-slide {
+        background-color: $color__white--1;
+        border-radius: $radius;
+        width: 100%;
+        min-height: 350px;
+        @include flex;
+        @include transition;
+        @include responsive( tablet ) {
+            &:hover {
+                transform: scale(105%);
+            }
+        }
+    }
+}
+.slide__top {
+    text-align: center;
+    font-size: 1.4rem;
+}
+.slide__title {
+    font: normal 600 3rem $font--2;
+    color: $color__black--1;
+    @include responsive( tablet ) {
+        font-size: 4rem;
+    }
+}
+.slide__info {
+    color: $color__black--2;
+    padding: 2rem 0;
+    list-style-type: circle;
+}
+/* Pagination Bullet  */
+.swiper-pagination-bullet {
+    background-color: $color__white--1;
+}

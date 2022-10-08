@@ -1,0 +1,106 @@
+/* Section */
+.section {
+    width: 100%;
+    padding: 1rem;
+    @include flex;
+    &__title {
+        color: $color__black--1;
+        margin: 2rem 0 1rem 0;
+        font: normal 600 $l-size $font--2;
+        @include responsive( tablet ) {
+            font-size: $xl-size;
+        }
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: $gap;
+        margin: 3rem 0 1rem 0;
+        width: 100%;
+        @include responsive( tablet ) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+.item {
+    border-radius: $radius;
+    text-align: center;
+    padding: 1rem;
+    min-height: 150px;
+    width: 100%;
+    @include transition;
+    &__top {
+        width: 100%;
+        position: relative;
+    }
+    &__top--circle {
+        border-radius: 50%;
+        border: 2.5px solid $color__primary;
+        color: $color__primary;
+        font: normal 800 $l-size $font--1;
+        margin: 0 auto;
+        @include size( 90px, 90px );
+        @include flex;
+        @include transition;
+    }
+    &__top--text {
+        font: normal 600 $m-size $font--1;
+        text-transform: uppercase;
+        margin-top: 1rem;
+    }
+    &__text {
+        text-align: center;
+        @include size;
+    }
+    & p span { font-style: italic; }
+    @include responsive( tablet ) {
+        &:hover {
+            transform: scale(105%);
+            background-color: $color__white--2;
+        }
+        &:hover .item__top--circle {
+            background-color: $color__primary;
+            color: $color__white--1;
+        }
+    }
+}
+.score {
+    font: normal 300 5rem $font--1;
+    width: 100%;
+    margin: 0 auto;
+    @include flex( row );
+    &__sup {
+        font: normal 800 40% $font--1;
+        color: $color__primary;
+        position: relative;
+        top: -2rem;
+    }
+}
+
+
+/* Section Banner for heading titles */
+.banner {
+    background-color: $color__black--2;
+    min-height: 200px;
+    width: 100%;
+    padding: 1rem;
+    @include flex;
+    @include responsive( tablet ) {
+        min-height: 300px;
+    }
+    @include responsive( desktop ) {
+        min-height: 400px;
+    }
+    &__title {
+        font: normal 600 $l-size $font--2;
+        color: $color__white--1;
+        margin: 2rem 0 1rem 0;
+        @include responsive( desktop ) {
+            font-size: $xl-size;
+        }
+    }
+}

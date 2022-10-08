@@ -1,0 +1,29 @@
+// Fonts
+$font--1: "Poppins", sans-serif;
+$font--2: "Playfair Display", serif;
+
+// Colors
+$color__primary: #5a189a;
+$color__primary--darker: #3c096c;
+
+$color__white--1: #fff;
+$color__white--2: #eee;
+
+$color__black--1: #111;
+$color__black--2: #222;
+
+// Font Sizes
+$s-size: 1.4rem;
+$m-size: 1.6rem;
+$l-size: 3.2rem;
+$xl-size: 4.8rem;
+
+// Sizes
+$gap: 1.5rem;
+$radius: .5rem;
+
+// Breakpoints
+$breakpoins: (
+    tablet: 768px,
+    desktop: 992px
+)

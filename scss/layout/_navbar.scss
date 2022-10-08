@@ -1,0 +1,97 @@
+/*** Navbar ***/
+#navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    padding: 0 1rem;
+    margin: 0 auto;
+    @include transition;
+}
+
+#check { display: none; }
+
+/* Add background-color on scroll */
+.active-nav { background-color: $color__primary; }
+
+.navigator {
+    height: 70px;
+    color: $color__white--1;
+    @include flex(row, space-between, center);
+    &__wrapper {
+        padding-top: 10px;
+        gap: $gap;
+        @include flex(row, unset, center);
+    }
+    &__item {
+        @include transition;
+        position: relative;
+        padding: 1rem;
+        &::after {
+            content: '';
+            background-color: $color__white--1;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            transform: scaleX( 0 );
+            transform-origin: bottom right;
+            @include size( 2px, 100%);
+            @include transition( transform );
+        }
+        &:hover::after {
+            transform: scaleX( 1 );
+            transform-origin: bottom left;
+        }
+    }
+    &__item--cta {
+        background-color: $color__white--1;
+        color: $color__black--1;
+        border-radius: $radius;
+        @include transition;
+        &:hover {
+            background-color: $color__primary--darker;
+            color: $color__white--1;
+        }
+        &::after { display: none; }
+    }   
+}
+.checkbtn {
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 768px) {
+    .checkbtn {
+        display: block;
+    }
+    .navigator {
+        flex-direction: row-reverse;
+        &__wrapper {
+            background-color: $color__primary;
+            position: fixed;
+            flex-direction: column;
+            top: 0;
+            left: -100%;
+            text-align: center;
+            z-index: -1;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s ease-in-out;
+            @include size( 100vh, 100% );
+        }
+        &__item {
+            display: block;
+            margin: 1rem 0;
+            font-size: 20px;
+            color: $color__white--1;
+            &::after {
+                content: '';
+                position: absolute;
+                display: none;
+            }
+        }
+        &__item--cta { color: $color__black--1; }
+    }
+    #check:checked ~ ul { left: 0; }
+}

@@ -1,0 +1,32 @@
+@mixin reset-pm {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin container ( $max-width: 1000px ) {
+    max-width: $max-width;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@mixin flex ( $dir: column, $just: center, $align: center ) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-items: $align;
+}
+
+@mixin transition ($value: all) {
+    transition: $value .2s ease-in-out;
+}
+
+@mixin size ($height: 100%, $width: 100%) {
+    height: $height;
+    width: $width;
+}
+
+@mixin responsive ($breakpoint) {
+    @media screen and (min-width: map-get($breakpoins, $breakpoint)){
+        @content;
+    }
+}

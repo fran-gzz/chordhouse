@@ -1,0 +1,73 @@
+.form {
+    margin-bottom: 2rem;
+    width: 100%;
+    display: grid;
+    gap: $gap;
+    grid-template-columns: 1fr;
+    grid-template-areas: "name" "surname" "email" "tel" "message" "button__form";
+    @include responsive( tablet ){
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "name surname"
+            "email tel "
+            "message message"
+            "button__form button__form"
+        ;
+    }
+}
+/* Grids areas */
+#name { grid-area: name; }
+#surname { grid-area: surname; }
+#email { grid-area: email; }
+#tel { grid-area: tel; }
+#message { grid-area: message; }
+#button__form { grid-area: button__form; }
+
+.input {
+    width: 100%;
+    position: relative;
+    &__label {
+        position: absolute;
+        left: 10px;
+        top: 15px;
+        padding: 0 2px;
+        z-index: 1;
+        color: $color__black--1;
+        @include transition;
+        &::before {
+            content: "";
+            background: $color__white--1;
+            position: absolute;
+            left: 0px;
+            top: 10px;
+            z-index: -1;
+            @include size( 5px, 100%);
+        }
+    }
+    &__text {
+        padding: 1.5rem;
+        font-size: 18px;
+        outline: none;
+        color: $color__black--1;
+        border-radius: $radius;
+        @include flex;
+        @include transition;
+        @include size( 5rem, 100% );
+        &::placeholder {
+            font-size: 16px;
+            opacity: 0;
+            @include transition;
+        }
+        &:focus::placeholder { opacity: 1; }
+    }
+    &__text--textarea {
+        resize: none;
+        height: 250px;
+    }
+}
+.input__text:focus + .input__label,
+.filled {
+    top: -10px;
+    color: $color__black--2;
+    font-size: 14px;
+}
