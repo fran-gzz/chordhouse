@@ -452,7 +452,7 @@ ul {
 }
 
 /* Section */
-.section {
+.section, .banner {
   width: 100%;
   padding: 1rem;
   display: flex;
@@ -555,22 +555,16 @@ ul {
 /* Section Banner for heading titles */
 .banner {
   background-color: #222;
-  min-height: 200px;
-  width: 100%;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-height: 150px;
 }
 @media screen and (min-width: 768px) {
   .banner {
-    min-height: 300px;
+    min-height: 250px;
   }
 }
 @media screen and (min-width: 992px) {
   .banner {
-    min-height: 400px;
+    min-height: 300px;
   }
 }
 .banner__title {

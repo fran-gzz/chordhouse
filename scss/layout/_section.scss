@@ -84,16 +84,14 @@
 
 /* Section Banner for heading titles */
 .banner {
+    @extend .section;
     background-color: $color__black--2;
-    min-height: 200px;
-    width: 100%;
-    padding: 1rem;
-    @include flex;
+    min-height: 150px;
     @include responsive( tablet ) {
-        min-height: 300px;
+        min-height: 250px;
     }
     @include responsive( desktop ) {
-        min-height: 400px;
+        min-height: 300px;
     }
     &__title {
         font: normal 600 $l-size $font--2;
