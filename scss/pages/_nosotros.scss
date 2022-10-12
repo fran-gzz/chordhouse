@@ -1,0 +1,9 @@
+.image__container {
+    margin: .5rem 0 3rem 0;
+    img {
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: $radius;
+    }
+}

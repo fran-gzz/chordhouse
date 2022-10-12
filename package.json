@@ -1,0 +1,27 @@
+{
+  "name": "chordhouse",
+  "version": "1.0.0",
+  "description": "proyecto final para coderhouse, en el curso de desarrollo web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": 
+    "node-sass --include-path scss scss/styles.scss css/styles.css",
+    "watch-sass": "nodemon -e scss -x \"npm run build-sass\""
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranGonzalez-dev/chordhouse.git"
+  },
+  "author": "Franco González",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FranGonzalez-dev/chordhouse/issues"
+  },
+  "homepage": "https://github.com/FranGonzalez-dev/chordhouse#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.3",
+    "nodemon": "^2.0.20"
+  }
+}

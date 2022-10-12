@@ -86,12 +86,12 @@
 .banner {
     @extend .section;
     background-color: $color__black--2;
-    min-height: 150px;
+    min-height: 180px;
     @include responsive( tablet ) {
-        min-height: 250px;
+        min-height: 200px;
     }
     @include responsive( desktop ) {
-        min-height: 300px;
+        min-height: 250px;
     }
     &__title {
         font: normal 600 $l-size $font--2;
