@@ -1,5 +1,33 @@
-/* Containers */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@200;300;400;600;700;800;900&display=swap");
+/****   Globals    ****/
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif; }
+
+main {
+  background-color: #fff; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+  a:hover {
+    color: unset; }
+
+ul {
+  list-style-type: none; }
+
+/* Containers */
 .container__1000px {
   padding: 0 1rem;
   max-width: 1000px;
@@ -34,34 +62,6 @@
     color: #fff; }
     .button--primary:hover {
       background-color: #3c096c; }
-
-/****   Globals    ****/
-html {
-  font-size: 62.5%;
-  box-sizing: border-box; }
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0; }
-
-body {
-  font-size: 1.6rem;
-  font-family: "Poppins", sans-serif; }
-
-main {
-  background-color: #fff; }
-
-a {
-  color: inherit;
-  text-decoration: none; }
-  a:hover {
-    color: unset; }
-
-ul {
-  list-style-type: none; }
 
 /* Bootstrap Modal  */
 .modal-dialog {
@@ -736,9 +736,23 @@ ul {
     transform: scale(102%); } }
 
 .image__container {
-  margin: .5rem 0 3rem 0; }
+  margin-bottom: 2rem;
+  position: relative; }
   .image__container img {
-    height: 500px;
-    width: 100%;
     object-fit: cover;
-    border-radius: 0.5rem; }
+    object-position: bottom;
+    border-radius: 0.5rem;
+    height: 200px;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .image__container img {
+        height: 250px; } }
+    @media screen and (min-width: 992px) {
+      .image__container img {
+        height: 350px; } }
+
+.image__text {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 2rem; }

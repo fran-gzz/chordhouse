@@ -1,9 +1,22 @@
 .image__container {
-    margin: .5rem 0 3rem 0;
+    margin-bottom: 2rem;
+    position: relative;
     img {
-        height: 500px;
-        width: 100%;
         object-fit: cover;
+        object-position: bottom;
         border-radius: $radius;
+        @include size( 200px, 100%);
+        @include responsive( tablet ) {
+            height: 250px;
+        }
+        @include responsive( desktop ) {
+            height: 350px;
+        }        
     }
+}
+.image__text {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 2rem;
 }

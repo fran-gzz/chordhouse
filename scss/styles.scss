@@ -1,9 +1,10 @@
 @import './abstracts/variables';
 @import './abstracts/mixins';
-@import './abstracts/utilities';
 
 @import './base/typography';
 @import './base/base';
+
+@import './abstracts/utilities';
 @import './base/bootstrap';
 
 @import './layout/navbar';
