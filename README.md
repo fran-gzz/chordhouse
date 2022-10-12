@@ -1,18 +1,16 @@
-# Desarrollo Web - Segunda preentrega.
+# Desarrollo Web - Tercera preentrega.
 
 ## ¡Hola! Espero que estés teniendo un gran día. 
 
-> En este proyecto quise crear un sitio ficticio sobre cursos de instrumentos musicales. Tomé como inspiración diversas plataformas de aprendizaje en línea.
+Esta es la tercera preentrega de mi proyecto final para [Coderhouse](https://www.coderhouse.com/ "Página de inicio de Coderhouse").
 
-Esta es la segunda preentrega de mi proyecto final para [Coderhouse](https://www.coderhouse.com/ "Página de inicio de Coderhouse").
+En esta ocasión se requería la entrega del proyecto con la utilización de SASS, y adaptación a SEO.
 
-En esta ocasión, se requería la entrega del proyecto con dos páginas a elección que estén adaptadas para uso mobile y desktop; así que puse principal énfasis en las páginas:
-* Index
-* Blog
+Instalé SASS usando npm, y cambié todo el CSS a SCSS; usé mixins para flex, responsive, y demas cosas.
+En cuanto a SEO, cambié el formato de todas mis imagenes a .webp, hice uso de etiquetas meta para keywords, para description y además usé una etiqueta especial para mobile, que cambia el color de la barra de notificaciones.
 
-Además, usé clases de bootstrap para organizar las demás páginas, y que no queden con mal aspecto.
+Como dato extra, en esta versión dejé de lado el uso de github pages para usar netlify.
 
-
-## Si querés echarle un vistazo al proyecto, podes hacerlo clickeando [aquí](https://frangonzalez-dev.github.io/preentrega-02__desarrolloWeb/ "Página de inicio del Proyecto").
+Si querés echarle un vistazo al proyecto, podes hacerlo clickeando [aquí](https://chordhouse.netlify.app/ "Chordhouse").
 
 Muchas gracias por tu tiempo! 
