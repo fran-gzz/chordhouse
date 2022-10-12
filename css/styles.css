@@ -129,51 +129,6 @@ ul {
       object-fit: cover;
       height: 90vh; } }
 
-.card {
-  border-radius: 1rem;
-  min-height: 300px;
-  border: none;
-  margin-bottom: 2rem;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); }
-  @media screen and (min-width: 992px) {
-    .card:hover {
-      transform: scale(105%); } }
-
-.card-top {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100px; }
-  .card-top img {
-    position: absolute;
-    z-index: 2;
-    border-radius: 50%;
-    object-fit: cover;
-    height: 150px;
-    width: 150px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); }
-
-.card-body {
-  margin-top: 2rem;
-  padding: 4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  @media screen and (min-width: 768px) {
-    .card-body {
-      padding: 4rem 1rem; } }
-  @media screen and (min-width: 992px) {
-    .card-body {
-      padding: 4rem; } }
-  .card-body .card-title {
-    font-size: 2rem;
-    font-weight: 600; }
-  .card-body .card-text {
-    margin-bottom: 20px; }
-
 /*** Navbar ***/
 #navbar {
   position: fixed;
@@ -756,3 +711,33 @@ ul {
   bottom: 10px;
   right: 10px;
   font-size: 2rem; }
+
+.cursosCard {
+  background-color: #fff;
+  border: 2px solid #111;
+  border-radius: 0.5rem;
+  width: 80%;
+  margin: 0 auto;
+  min-height: 350px;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out; }
+  @media screen and (min-width: 768px) {
+    .cursosCard {
+      width: 100%; }
+      .cursosCard:hover {
+        transform: scale(105%); } }
+  .cursosCard__top {
+    text-align: center;
+    font-size: 1.4rem; }
+  .cursosCard__title {
+    font: normal 600 3rem "Playfair Display", serif; }
+    @media screen and (min-width: 768px) {
+      .cursosCard__title {
+        font-size: 4rem; } }
+  .cursosCard__info {
+    padding: 2rem 0;
+    list-style-type: circle; }

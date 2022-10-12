@@ -1,0 +1,31 @@
+.cursosCard {
+        background-color: $color__white--1;
+        border: 2px solid $color__black--1;
+        border-radius: $radius;
+        width: 80%;
+        margin: 0 auto;
+        min-height: 350px;
+        color: $color__black--1;
+        @include flex;
+        @include transition;
+        @include responsive( tablet ) {
+            width: 100%;
+            &:hover {
+                transform: scale(105%);
+            }
+        }
+        &__top {
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        &__title{
+            font: normal 600 3rem $font--2;
+            @include responsive( tablet ) {
+                font-size: 4rem;
+            }
+        }
+        &__info {
+            padding: 2rem 0;
+            list-style-type: circle;
+        }
+}
