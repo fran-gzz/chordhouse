@@ -283,6 +283,7 @@ ul {
     font-size: 18px;
     outline: none;
     color: #111;
+    border: 2px solid #222;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;

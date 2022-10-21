@@ -48,7 +48,8 @@
         padding: 1.5rem;
         font-size: 18px;
         outline: none;
-        color: $color__black--1;
+        color: $color__black--1;       
+        border: 2px solid $color__black--2;
         border-radius: $radius;
         @include flex;
         @include transition;
