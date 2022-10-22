@@ -86,10 +86,16 @@
 }
 .entry {
     cursor: pointer;
-    margin-bottom: 1.5rem;
     gap: $gap;
+    margin: 2rem 0;
     @include size(50px, 100%);
     @include flex(row, start);
+    @include responsive ( tablet ) {
+        margin: 3rem 0;
+    }
+    @include responsive ( desktop) {
+        margin: 2rem 0;
+    }
     &__image {
         object-fit: cover;
         border-radius: $radius;
@@ -97,10 +103,14 @@
     }
     &__content {
         height: 100%;
-        @include flex(column, space-between, flex-start);
+        
+        @include flex( column, space-between, flex-start );
     }
     &__title {
-        font: normal 600 1.6rem $font--1;
+        font: normal 600 $s-size $font--1;
+        @include responsive( desktop ) {
+            font-size: $m-size;
+        }
     }
     &__date {
         text-transform: uppercase;
