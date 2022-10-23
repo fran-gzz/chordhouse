@@ -1,16 +1,25 @@
-# Desarrollo Web - Tercera preentrega.
+# Desarrollo Web - Entrega Final.
 
-## ¡Hola! Espero que estés teniendo un gran día. 
+Hola! Esta es la entrega final de mi proyecto para [Coderhouse](https://www.coderhouse.com/ "Página de inicio de Coderhouse").
 
-Esta es la tercera preentrega de mi proyecto final para [Coderhouse](https://www.coderhouse.com/ "Página de inicio de Coderhouse").
 
-En esta ocasión se requería la entrega del proyecto con la utilización de SASS, y adaptación a SEO.
 
-Instalé SASS usando npm, y cambié todo el CSS a SCSS; usé mixins para flex, responsive, y demas cosas.
-En cuanto a SEO, cambié el formato de todas mis imagenes a .webp, hice uso de etiquetas meta para keywords, para description y además usé una etiqueta especial para mobile, que cambia el color de la barra de notificaciones.
+[Link del proyecto.](https://chordhouse.netlify.app/ "Chordhouse").
 
-Como dato extra, en esta versión dejé de lado el uso de github pages para usar netlify.
 
-Si querés echarle un vistazo al proyecto, podes hacerlo clickeando [aquí](https://chordhouse.netlify.app/ "Chordhouse").
+#### Descripción del proyecto.
+
+* 5 archivos html.
+* Metodología mobile first.
+* Adaptado para tablets, y dispositivos de escritorio.
+* Los estilos fueron dados utilizando SASS, en su sintáxis de SCSS.
+* Se utilizó NPM para instalar sass, y también para su posterior compilado.
+* Utilización de mixins para dar formato responsive.
+* Uso de javascript para animar la transición en el navbar al scrollear.
+* Uso de javascript para animar un efecto onClick en los formularios.
+* Además, se usó la librería de javascript [SwiperJs](https://swiperjs.com/ "Página de inicio de SwiperJs"), para los slides del archivo index.
+* Se utilizó bootstrap para modales.
+* Y como extra, se utilizó el meta "theme-color" para cambiar los colores de la barra de actividad en los navegadores móviles. (Solo es posible de ver si se abre desde un dispositivo celular o tablet).
+
 
 Muchas gracias por tu tiempo! 
